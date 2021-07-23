@@ -199,31 +199,57 @@
                                                 </div>
                                                 <div class="x_panel">
                                                     <div class="x_title">
-                                                        <h2><i class="fa fa-warning red"></i> Ganti Password <i class="fa fa-warning red"></i> </h2>
+                                                        <h2>Ganti Password </h2>
                                                         
                                                         
                                                         <div class="clearfix"></div>
                                                     </div>
                                                                             <div class="x_content">
                                                         <br>
-                                                            <form action="/profil/update" method="POST" id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="" enctype="multipart/form-data">
-                                                                <input type="hidden" name="_token" value="PmLLJaQaoY0eAcFXoPZAhM6GzREZTDHVFS4blFOK">                                    
+                                                            <form action="/profil/ganti-password" method="POST" id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+                                                                @csrf
+                                                                                                
                                                                 
                                                                                                     <div class="field item form-group">
-                                                                    <label class="col-form-label col-md-3 col-sm-3  label-align" for="name">Password <span class="required">*</span></label>
+                                                                    <label class="col-form-label col-md-3 col-sm-3  label-align" for="password">Password <span class="required">*</span></label>
                                                                     <div class="col-md-6 col-sm-6">
-                                                                        <input class="form-control" type="text" name="name" id="name" data-validate-minmax="10,100" required="required"></div>
+                                                                        <input class="form-control" type="password" name="password" id="password" required="required"></div>
                                                                 </div>
+                                                                @error('password') 
+                                                                <div class="item form-group" style="margin-top:-10px;">
+                                                                    <label id="label-error" class="col-form-label col-md-3 col-sm-3 label-align"></label>
+                                                                    <div class="col-md-6 col-sm-6 text-danger">
+                                                                        {{$message}}
+                                                                    </div>
+                                                                </div>
+                                                                @enderror
                                                                 
                                                                 <div class="field item form-group">
-                                                                    <label class="col-form-label col-md-3 col-sm-3  label-align" for="name">Password Baru <span class="required">*</span></label>
+                                                                    <label class="col-form-label col-md-3 col-sm-3  label-align" for="password_baru">Password Baru <span class="required">*</span></label>
                                                                     <div class="col-md-6 col-sm-6">
-                                                                        <input class="form-control" type="text" name="name" id="name" data-validate-minmax="10,100" required="required"></div>
-                                                                </div><div class="field item form-group">
-                                                                    <label class="col-form-label col-md-3 col-sm-3  label-align" for="name">Password Konfirmasi <span class="required">*</span></label>
-                                                                    <div class="col-md-6 col-sm-6">
-                                                                        <input class="form-control" type="text" name="name" id="name" data-validate-minmax="10,100" required="required"></div>
+                                                                        <input class="form-control" type="password" name="password_baru" id="password_baru" required="required"></div>
                                                                 </div>
+                                                                @error('password_baru') 
+                                                                <div class="item form-group" style="margin-top:-10px;">
+                                                                    <label id="label-error" class="col-form-label col-md-3 col-sm-3 label-align"></label>
+                                                                    <div class="col-md-6 col-sm-6 text-danger">
+                                                                        {{$message}}
+                                                                    </div>
+                                                                </div>
+                                                                @enderror
+                                                                <div class="field item form-group">
+                                                                    <label class="col-form-label col-md-3 col-sm-3  label-align" for="password_konfirmasi">Password Konfirmasi <span class="required">*</span></label>
+                                                                    <div class="col-md-6 col-sm-6">
+                                                                        <input class="form-control" type="password" name="password_konfirmasi" id="password_konfirmasi" required="required"></div>
+                                                                </div>
+                                                                @error('password_konfirmasi') 
+                                                                <div class="item form-group" style="margin-top:-10px;">
+                                                                    <label id="label-error" class="col-form-label col-md-3 col-sm-3 label-align"></label>
+                                                                    <div class="col-md-6 col-sm-6 text-danger">
+                                                                        {{$message}}
+                                                                    </div>
+                                                                </div>
+                                                                @enderror
                                                                                                                     
                                                                                                                         
                                                                         

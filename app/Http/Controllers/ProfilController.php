@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\ProfilModel;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfilController extends Controller
 {
@@ -87,6 +89,30 @@ class ProfilController extends Controller
             $this->ProfilModel->updateProfil($id_user, $dataProfil);
             $this->ProfilModel->updateUsers($id_user, $dataUsers);
             return redirect()->route('profil')->with('pesan', 'berhasil');
+        }
+    }
+
+    public function gantiPassword()
+    {
+        $id_user = auth()->user()->id;
+        $password_user = auth()->user()->password;
+
+        Request()->validate([
+
+            'password' => 'required',
+            'password_baru' => 'required|min:8',
+            'password_konfirmasi' => 'required|same:password_baru',
+        ]);
+
+        if (Hash::check(Request()->password, $password_user)) {
+            $data = [
+                'password' => Hash::make(Request()->password_baru)
+            ];
+            $this->ProfilModel->updateUsers($id_user, $data);
+            return redirect()->route('profil')->with('pesan', 'berhasil');
+        } else {
+
+            return redirect()->route('profil')->with('pesan', 'tidak berhasil');
         }
     }
 }

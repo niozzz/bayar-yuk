@@ -36,6 +36,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Profil
 Route::get('/profil', [ProfilController::class, 'index'])->name('profil');
 Route::post('/profil/update', [ProfilController::class, 'update']);
+Route::post('/profil/ganti-password', [ProfilController::class, 'gantiPassword']);
 
 
 Route::group(['middleware' => 'admin'], function () {
