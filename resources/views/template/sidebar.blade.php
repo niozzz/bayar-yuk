@@ -40,7 +40,7 @@
                 
             
             <li>
-                <a href="/">
+                <a href="/home">
                     <i class="fa fa-home"></i>
                     Home
                     <span class="label label-success pull-right"></span>

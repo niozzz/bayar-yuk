@@ -65,7 +65,8 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-pencil"></i> BayarYuk!</h1>
+                  <a href="/"> <h1><i class="fa fa-pencil"></i> <span> BayarYuk!</span></h1>
+                  </a>
                   <p>©2021 All Rights Reserved. Made with <i class="fa fa-heart red"></i> by Millenio</p>
                 </div>
               </div>
@@ -121,7 +122,8 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-pencil"></i> BayarYuk!</h1>
+                 <a href="/"> <h1><i class="fa fa-pencil"></i> <span> BayarYuk!</span></h1>
+                 </a>
                   <br>
                   <p>©2021 All Rights Reserved. Made with <i class="fa fa-heart red"></i> by Millenio</p>
                 </div>
