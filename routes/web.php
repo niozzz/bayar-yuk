@@ -10,6 +10,7 @@ use App\Http\Controllers\HistoryPiutangController;
 use App\Http\Controllers\TemanController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LandingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,8 @@ use App\Http\Controllers\UserController;
 */
 
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
+Route::get('/', [LandingController::class, 'landing']);
 
 // Route::get('/bayar/hutang', [BayarHutangController::class, 'index']);
 // Route::get('/home', [HomeController::class, 'index'])->name('home');

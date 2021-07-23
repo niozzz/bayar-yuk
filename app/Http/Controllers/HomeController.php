@@ -120,4 +120,9 @@ class HomeController extends Controller
         ];
         return view('dashboard', $data);
     }
+
+    public function landing()
+    {
+        return view('landing/index');
+    }
 }
