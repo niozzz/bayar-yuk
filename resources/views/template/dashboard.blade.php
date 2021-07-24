@@ -13,8 +13,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>BayarYuk!
-        </title>
+        <!-- Website Title -->
+        <title>BayarYuk! - Bayar Hutangmu, lindungi akhiratmu</title>
 
         <!-- Bootstrap -->
         <link
@@ -57,6 +57,8 @@
         <link
             href="{{asset('template_dashboard')}}/build/css/custom.min.css"
             rel="stylesheet">
+        <!-- Favicon  -->
+        <link rel="icon" href="{{ asset('template_landing') }}/images/pencil.png">
 
         <style>
 

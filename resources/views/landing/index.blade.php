@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
-    <meta name="author" content="Inovatik">
+    <meta name="description" content="BaYu adalah sebuah platform website yang memiliki fitur untuk mencatat transaksi kegiatan hutang piutang antar individu">
+    <meta name="author" content="Millenio">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
 	<meta property="og:site_name" content="" /> <!-- website name -->
@@ -18,7 +18,7 @@
 	<meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>Tivo - SaaS App HTML Landing Page Template</title>
+    <title>BayarYuk! - Bayar Hutangmu, lindungi akhiratmu</title>
     
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
@@ -34,7 +34,7 @@
             rel="stylesheet">
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="{{ asset('template_landing') }}/images/favicon.png">
+    <link rel="icon" href="{{ asset('template_landing') }}/images/pencil.png">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
@@ -148,11 +148,11 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="image-wrapper">
-                                        <img class="img-fluid" src="{{ asset('template_landing') }}/images/testimonial-1.jpg" alt="alternative">
+                                        <img class="img-fluid" src="{{ asset('template_landing') }}/images/lisa.jpg" alt="alternative">
                                     </div> <!-- end of image-wrapper -->
                                     <div class="text-wrapper">
-                                        <div class="testimonial-text">I started to use Tivo with the free trial about a year ago and never stopped since then. It does all the repeating marketing tasks and allows me to focus on core development activities like new product research and design. I love it and recommend it to everyone.</div>
-                                        <div class="testimonial-author">Jude Thorn - Online Marketer</div>
+                                        <div class="testimonial-text">Wow! Aplikasi ini sangat berguna dalam membantu saya dalam mencatat jumlah hutangnya jennie. Jennie sangat sering berhutang kepada saya, saya sampai kesal karena terlalu banyak hutang yang dia minta ke saya. By The way, terima kasih Millenio telah membuatkan aplikasi ini.</div>
+                                        <div class="testimonial-author">Lisa - Penjual Makaroni Telor</div>
                                     </div> <!-- end of text-wrapper -->
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
@@ -160,11 +160,11 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="image-wrapper">
-                                        <img class="img-fluid" src="{{ asset('template_landing') }}/images/testimonial-2.jpg" alt="alternative">
+                                        <img class="img-fluid" src="{{ asset('template_landing') }}/images/putin.jpg" alt="alternative">
                                     </div> <!-- end of image-wrapper -->
                                     <div class="text-wrapper">
-                                        <div class="testimonial-text">Awesome features for the money. I never thought such a low ammount of money would bring me so many leads per month. Before Tivo I used the services of an agency which cost 10x more and delivered far less. Highly recommended to marketers focused on results.</div>
-                                        <div class="testimonial-author">Roy Smith - Developer</div>
+                                        <div class="testimonial-text">Sebagai seorang pemimpin negara, saya sangat berterima kasih kepada Millenio yang telah membantu membuatkan aplikasi ini. Dengan BaYu, kini saya dapat mencatat hutang piutang negara dengan mudah. Fiturnya lengkap dan tampilannya menarik.</div>
+                                        <div class="testimonial-author">Vladimir Putin - Presiden Rusia</div>
                                     </div> <!-- end of text-wrapper -->
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
@@ -172,11 +172,11 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="image-wrapper">
-                                        <img class="img-fluid" src="{{ asset('template_landing') }}/images/testimonial-3.jpg" alt="alternative">
+                                        <img class="img-fluid" src="{{ asset('template_landing') }}/images/gyuri.jpg" alt="alternative">
                                     </div> <!-- end of image-wrapper -->
                                     <div class="text-wrapper">
-                                        <div class="testimonial-text">Tivo is the best marketing automation app for small and medium sized business. It understands the mindset of young entrepreneurs and provides the necessary data for wise marketing decisions. Just give it a try and you will definitely not regret spending your time.</div>
-                                        <div class="testimonial-author">Marsha Singer - Online Marketer</div>
+                                        <div class="testimonial-text">Sebagai seorang istri yang bertanggung jawab, saya sangat senang suami saya dapat membuatkan aplikasi ini. Sekarang, saya tidak perlu repot-repot lagi mencatat hutang saya kepada suami saya. Terima kasih suamiku, Millenio.</div>
+                                        <div class="testimonial-author">Park Joo Hyun - Ibu Rumah Tangga</div>
                                     </div> <!-- end of text-wrapper -->
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
@@ -184,11 +184,11 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="image-wrapper">
-                                        <img class="img-fluid" src="{{ asset('template_landing') }}/images/testimonial-4.jpg" alt="alternative">
+                                        <img class="img-fluid" src="{{ asset('template_landing') }}/images/cevan.jpg" alt="alternative">
                                     </div> <!-- end of image-wrapper -->
                                     <div class="text-wrapper">
-                                        <div class="testimonial-text">Tivo is one of the greatest marketing automation apps out there. I especially love the Reporting Tools module because it gives me such a great amount of information based on little amounts of input gathered in just few weeks of light weight usage. Recommended!</div>
-                                        <div class="testimonial-author">Ronda Louis - Online Marketer</div>
+                                        <div class="testimonial-text">Saya adalah seorang aktor yang membintangi beberapa film terkenal. Terkadang saya lupa untuk mencatat hutang teman-teman saya di lokasi syuting. Berkat BaYu!, sekarang saya tidak perlu khawatir lagi. Sekarang saya dapat dengan mudah mencatat hutang teman-teman biadab saya yang tidak kunjung bayar hutang.</div>
+                                        <div class="testimonial-author">Chris Evan - Aktor Film Adzab</div>
                                     </div> <!-- end of text-wrapper -->
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
@@ -221,8 +221,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-col first">
-                        <h4>About Tivo</h4>
-                        <p class="p-small">We're passionate about designing and developing one of the best marketing apps in the market</p>
+                        <h4>About BayarYuk!</h4>
+                        <p class="p-small">Sebuah platform yang menyediakan fitur untuk mencatat transaksi kegiatan hutang piutang. Bermula dari permasalahan pribadi dengan teman-teman, akhirnya seorang mahasiswa UNDIP berinisiatif membuatkan websitenya.</p>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
@@ -231,7 +231,7 @@
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body">Our business partners <a class="white" href="#your-link">startupguide.com</a></div>
+                                <div class="media-body">Our business partners <a class="white" href="#your-link">google.com</a></div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-square"></i>
@@ -250,7 +250,7 @@
                             </li>
                             <li class="media">
                                 <i class="fas fa-envelope"></i>
-                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com">contact@tivo.com</a> <i class="fas fa-globe"></i><a class="white" href="#your-link">www.tivo.com</a></div>
+                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com">contact-bayu@gmail.com</a> <i class="fas fa-globe"></i><a class="white" href="#your-link">www.nasikering.com</a></div>
                             </li>
                         </ul>
                     </div> 
