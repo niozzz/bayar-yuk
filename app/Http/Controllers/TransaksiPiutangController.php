@@ -83,6 +83,12 @@ class TransaksiPiutangController extends Controller
     public function ubahPiutang($id)
     {
         $id_user = auth()->user()->id;
+        $dataPiutang = $this->TransaksiPiutangModel->getPiutang($id);
+
+        if ($dataPiutang->id_kreditur != $id_user) {
+            return redirect()->route('transaksiPiutang');
+        }
+
         $dataIdTeman1 = $this->TemanModel->getAllTeman1($id_user);
         $tampungID = [];
         foreach ($dataIdTeman1 as $data) {
@@ -95,7 +101,7 @@ class TransaksiPiutangController extends Controller
         }
 
         $data = [
-            'piutang' => $this->TransaksiPiutangModel->getPiutang($id),
+            'piutang' => $dataPiutang,
             'teman' => $this->TemanModel->getAllData(),
             'idTeman' => $tampungID
         ];
