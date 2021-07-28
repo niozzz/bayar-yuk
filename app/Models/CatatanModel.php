@@ -45,8 +45,7 @@ class CatatanModel extends Model
     public function getPiutangByIdUser($id_user)
     {
         return DB::table('cpiutang')
-            ->join('users', 'users.id', '=', 'cpiutang.id_kreditur')
             ->where('id_kreditur', $id_user)
-            ->first();
+            ->get();
     }
 }

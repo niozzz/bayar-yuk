@@ -26,6 +26,19 @@
 	<link href="{{ asset('template_landing') }}/css/magnific-popup.css" rel="stylesheet">
 	<link href="{{ asset('template_landing') }}/css/styles.css" rel="stylesheet">
 
+    <!-- Datatables -->
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+    {{-- <link href="{{asset('template_dashboard')}}/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet"> --}}
+    {{-- <link href="{{asset('template_dashboard')}}/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet"> --}}
+    {{-- <link href="{{asset('template_dashboard')}}/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet"> --}}
+    <link href="{{asset('template_dashboard')}}/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    {{-- <link href="{{asset('template_dashboard')}}/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet"> --}}
+    <!-- Custom Theme Style -->
+    {{-- <link
+    href="{{asset('template_dashboard')}}/build/css/custom.min.css"
+    rel="stylesheet"> --}}
     <!-- Font Awesome -->
         <link
             href="{{asset('template_dashboard')}}/vendors/font-awesome/css/font-awesome.min.css"

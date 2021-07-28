@@ -32,13 +32,15 @@ class LandingController extends Controller
     public function catatanPribadi($id)
     {
         $dataPiutang = $this->CatatanModel->getPiutangByIdUser($id);
+        $dataProfil = $this->ProfilModel->getDataUsers($id);
 
         if (empty($dataPiutang)) {
             abort(404);
         }
 
         $data = [
-            'piutang' => $dataPiutang
+            'piutang' => $dataPiutang,
+            'profil' => $dataProfil
         ];
 
         return view('landing/catatan-pribadi', $data);
