@@ -11,6 +11,7 @@ use App\Http\Controllers\TemanController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\CatatanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,4 +72,9 @@ Route::group(['middleware' => 'user'], function () {
     Route::get('/teman/tambah-teman', [TemanController::class, 'tambahTeman']);
     Route::post('/teman/insert-notifikasi', [TemanController::class, 'insertNotifikasi']);
     Route::post('/teman/insert-teman', [TemanController::class, 'insertTeman']);
+
+    // catatan pribadi
+    Route::get('/catatan', [CatatanController::class, 'index'])->name('catatan');
+    Route::get('/catatan/tambah-catatan', [CatatanController::class, 'tambahCatatan']);
+    Route::post('/catatan/insert', [CatatanController::class, 'insert']);
 });

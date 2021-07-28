@@ -15,7 +15,7 @@
                 <div class="col-md-12 col-sm-12 ">
                     <div class="x_panel">
                         <div class="x_title">
-                            <a class="btn btn-danger" href="/transaksi/piutang">Kembali</a>
+                            <a class="btn btn-danger" href="/catatan">Kembali</a>
                             
                             
                             <div class="clearfix"></div>
@@ -23,7 +23,7 @@
                         <div class="x_content">
                             <br>
                                 <form
-                                    action="/transaksi/piutang/update/{{ $piutang-> id_tpiutang }}"
+                                    action="/catatan/insert"
                                     method="POST"
                                     id="demo-form2"
                                     data-parsley-validate=""
@@ -31,13 +31,19 @@
                                     novalidate="">
                                     @csrf
                                     
-                                    <div class="item form-group">
-                                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="id_debitur">Nama Debitur
+                                    <div class="field item form-group">
+                                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="nama_debitur">Nama Debitur
+                                            <span class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 ">
-                                            <input type="text" id="id_debitur" readonly value="{{ $piutang->name }}" class="form-control "></div>
+                                            <input type="text" id="nama_debitur" name="nama_debitur" required="required" class="form-control ">
+                                            
                                         </div>
-                                    @error('id_debitur') 
+                                        
+
+                                        
+                                    </div>
+                                    @error('nama_debitur') 
                                     <div class="item form-group" style="margin-top:-10px;">
                                         <label id="label-error" class="col-form-label col-md-3 col-sm-3 label-align"></label>
                                         <div class="col-md-6 col-sm-6 text-danger">
@@ -47,11 +53,11 @@
                                     @enderror
 
                                     <div class="field item form-group">
-                                        <label class="col-form-label col-md-3 col-sm-3  label-align" for="jumlah_tpiutang">Jumlah Uang <span class="required">*</span></label>
+                                        <label class="col-form-label col-md-3 col-sm-3  label-align" for="jumlah_cpiutang">Jumlah Uang <span class="required">*</span></label>
                                         <div class="col-md-6 col-sm-6">
-                                            <input class="form-control" value="{{ $piutang-> jumlah_tpiutang }}" type="number" name="jumlah_tpiutang" id="jumlah_tpiutang" data-validate-minmax="10,9999999999" required="required"></div>
+                                            <input class="form-control" type="number" name="jumlah_cpiutang" id="jumlah_cpiutang" data-validate-minmax="10,999999999" required="required"></div>
                                     </div>
-                                            @error('jumlah_tpiutang') 
+                                            @error('jumlah_cpiutang') 
                                             <div class="item form-group" style="margin-top:-10px;">
                                                 <label id="label-error" class="col-form-label col-md-3 col-sm-3 label-align"></label>
                                                 <div class="col-md-6 col-sm-6 text-danger">
@@ -60,13 +66,13 @@
                                             </div>
                                             @enderror
                                             <div class="item form-group">
-                                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="tanggal_tpiutang">Tanggal
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="tanggal_cpiutang">Tanggal
                                                     <span class="required">*</span>
                                                 </label>
                                                 <div class="col-md-6 col-sm-6 ">
                                                     <input
-                                                        id="tanggal_tpiutang"
-                                                        name="tanggal_tpiutang"
+                                                        id="tanggal_cpiutang"
+                                                        name="tanggal_cpiutang"
                                                         class="date-picker form-control"
                                                         placeholder="dd-mm-yyyy"
                                                         type="date"
@@ -75,8 +81,7 @@
                                                         onmouseover="this.type='date'"
                                                         onclick="this.type='date'"
                                                         onblur="this.type='text'"
-                                                        onmouseout="timeFunctionLong(this)"
-                                                        value="{{ $piutang-> tanggal_tpiutang }}">
+                                                        onmouseout="timeFunctionLong(this)">
                                                         <script>
                                                             function timeFunctionLong(input) {
                                                                 setTimeout(function () {
@@ -86,7 +91,7 @@
                                                         </script>
                                                     </div>
                                                 </div>
-                                                @error('tanggal_tpiutang') 
+                                                @error('tanggal_cpiutang') 
                                                 <div class="item form-group" style="margin-top:-10px;">
                                                     <label id="label-error" class="col-form-label col-md-3 col-sm-3 label-align"></label>
                                                     <div class="col-md-6 col-sm-6 text-danger">
@@ -95,13 +100,13 @@
                                                 </div>
                                                 @enderror
                                             <div class="item form-group">
-                                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="keterangan_tpiutang">Keterangan
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="keterangan_cpiutang">Keterangan
                                                     <span class="required">*</span>
                                                 </label>
                                                 <div class="col-md-6 col-sm-6 ">
-                                                    <input type="text" id="keterangan_tpiutang" name="keterangan_tpiutang"  required="required" class="form-control " value="{{ $piutang-> keterangan_tpiutang }}"></div>
+                                                    <input type="text" id="keterangan_cpiutang" name="keterangan_cpiutang"  required="required" class="form-control "></div>
                                                 </div>
-                                                @error('keterangan_tpiutang') 
+                                                @error('keterangan_cpiutang') 
                                                 <div class="item form-group" style="margin-top:-10px;">
                                                     <label id="label-error" class="col-form-label col-md-3 col-sm-3 label-align"></label>
                                                     <div class="col-md-6 col-sm-6 text-danger">

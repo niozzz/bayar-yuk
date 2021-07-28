@@ -96,6 +96,13 @@
                 </ul>
             </li>
             <li>
+                <a href="/catatan">
+                    <i class="fa fa-pencil-square-o"></i>
+                    Catatan Pribadi
+                    <span class="label label-success pull-right"></span>
+                </a>
+            </li>
+            <li>
                 <a href="/profil">
                     <i class="fa fa-info"></i>
                     Profil
