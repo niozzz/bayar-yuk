@@ -20,4 +20,18 @@ class CatatanModel extends Model
     {
         DB::table('cpiutang')->insert($data);
     }
+
+    public function getPiutang($id)
+    {
+        return DB::table('cpiutang')
+            ->where('id_cpiutang', $id)
+            ->first();
+    }
+
+    public function ubahData($id_cpiutang, $data)
+    {
+        DB::table('cpiutang')
+            ->where('id_cpiutang', $id_cpiutang)
+            ->update($data);
+    }
 }

@@ -77,4 +77,6 @@ Route::group(['middleware' => 'user'], function () {
     Route::get('/catatan', [CatatanController::class, 'index'])->name('catatan');
     Route::get('/catatan/tambah-catatan', [CatatanController::class, 'tambahCatatan']);
     Route::post('/catatan/insert', [CatatanController::class, 'insert']);
+    Route::get('/catatan/ubah-catatan/{id}', [CatatanController::class, 'ubahCatatan']);
+    Route::post('/catatan/update', [CatatanController::class, 'update']);
 });

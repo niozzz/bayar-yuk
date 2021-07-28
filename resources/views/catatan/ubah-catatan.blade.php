@@ -5,7 +5,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Tambah Catatan</h3>
+                <h3>Ubah Catatan</h3>
             </div>
 
             
@@ -23,7 +23,7 @@
                         <div class="x_content">
                             <br>
                                 <form
-                                    action="/catatan/insert"
+                                    action="/catatan/update"
                                     method="POST"
                                     id="demo-form2"
                                     data-parsley-validate=""
@@ -31,12 +31,13 @@
                                     novalidate="">
                                     @csrf
                                     
+                                    <input type="hidden" name="id_cpiutang" value="{{ $piutang-> id_cpiutang }}">
                                     <div class="field item form-group">
                                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="nama_debitur">Nama Debitur
                                             <span class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 ">
-                                            <input type="text" id="nama_debitur" name="nama_debitur" required="required" class="form-control ">
+                                            <input type="text" id="nama_debitur" name="nama_debitur" required="required" class="form-control" value="{{ $piutang-> nama_debitur }}">
                                             
                                         </div>
                                         
@@ -55,7 +56,7 @@
                                     <div class="field item form-group">
                                         <label class="col-form-label col-md-3 col-sm-3  label-align" for="jumlah_cpiutang">Jumlah Uang <span class="required">*</span></label>
                                         <div class="col-md-6 col-sm-6">
-                                            <input class="form-control" type="number" name="jumlah_cpiutang" id="jumlah_cpiutang" data-validate-minmax="10,999999999" required="required"></div>
+                                            <input class="form-control" type="number" name="jumlah_cpiutang" id="jumlah_cpiutang" data-validate-minmax="10,999999999" required="required" value="{{ $piutang->jumlah_cpiutang }}"></div>
                                     </div>
                                             @error('jumlah_cpiutang') 
                                             <div class="item form-group" style="margin-top:-10px;">
@@ -81,7 +82,9 @@
                                                         onmouseover="this.type='date'"
                                                         onclick="this.type='date'"
                                                         onblur="this.type='text'"
-                                                        onmouseout="timeFunctionLong(this)">
+                                                        onmouseout="timeFunctionLong(this)"
+                                                        value="{{ $piutang->tanggal_cpiutang }}"
+                                                        >
                                                         <script>
                                                             function timeFunctionLong(input) {
                                                                 setTimeout(function () {
@@ -104,7 +107,7 @@
                                                     <span class="required">*</span>
                                                 </label>
                                                 <div class="col-md-6 col-sm-6 ">
-                                                    <input type="text" id="keterangan_cpiutang" name="keterangan_cpiutang"  required="required" class="form-control "></div>
+                                                    <input type="text" id="keterangan_cpiutang" name="keterangan_cpiutang"  required="required" class="form-control " value="{{ $piutang->keterangan_cpiutang }}"></div>
                                                 </div>
                                                 @error('keterangan_cpiutang') 
                                                 <div class="item form-group" style="margin-top:-10px;">

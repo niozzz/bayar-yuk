@@ -96,7 +96,7 @@
                                                     <div class="btn-group">
                                                         <a
                                                             class="btn btn-sm btn-warning"
-                                                            href="/transaksi/ubah-piutang/{{$data-> id_cpiutang}}">Ubah</a>
+                                                            href="/catatan/ubah-catatan/{{$data-> id_cpiutang}}">Ubah</a>
                                                         <button
                                                             class="btn btn-sm btn-danger"
                                                             type="button"
