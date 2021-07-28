@@ -7,6 +7,7 @@ use App\Models\TemanModel;
 use App\Models\TransaksiHutangModel;
 use App\Models\TransaksiPiutangModel;
 use App\Models\ProfilModel;
+use App\Models\CatatanModel;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -20,10 +21,26 @@ class LandingController extends Controller
         $this->TransaksiPiutangModel = new TransaksiPiutangModel();
         $this->ProfilModel = new ProfilModel();
         $this->User = new User();
+        $this->CatatanModel = new CatatanModel();
     }
 
     public function landing()
     {
         return view('landing/index');
+    }
+
+    public function catatanPribadi($id)
+    {
+        $dataPiutang = $this->CatatanModel->getPiutangByIdUser($id);
+
+        if (empty($dataPiutang)) {
+            abort(404);
+        }
+
+        $data = [
+            'piutang' => $dataPiutang
+        ];
+
+        return view('landing/catatan-pribadi', $data);
     }
 }

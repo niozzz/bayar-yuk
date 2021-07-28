@@ -27,6 +27,7 @@ use App\Http\Controllers\CatatanController;
 
 Route::get('/home', [HomeController::class, 'index']);
 Route::get('/', [LandingController::class, 'landing']);
+Route::get('/catatan-pribadi/{id}', [LandingController::class, 'catatanPribadi']);
 
 // Route::get('/bayar/hutang', [BayarHutangController::class, 'index']);
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
