@@ -11,6 +11,7 @@ class CatatanController extends Controller
 
     public function __construct()
     {
+        $this->middleware('auth');
         $this->TransaksiPiutangModel = new TransaksiPiutangModel;
         $this->CatatanModel = new CatatanModel;
     }
