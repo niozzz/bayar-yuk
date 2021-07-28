@@ -199,7 +199,7 @@
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                                                             <a
-                                                                href="/transaksi/hapus-piutang/{{$data-> id_cpiutang}}"
+                                                                href="/catatan/hapus-catatan/{{$data-> id_cpiutang}}"
                                                                 class="btn btn-danger">Hapus</a>
                                                         </form>
                                                     </div>

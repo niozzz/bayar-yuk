@@ -34,4 +34,11 @@ class CatatanModel extends Model
             ->where('id_cpiutang', $id_cpiutang)
             ->update($data);
     }
+
+    public function hapusData($id)
+    {
+        DB::table('cpiutang')
+            ->where('id_cpiutang', $id)
+            ->delete();
+    }
 }

@@ -94,4 +94,10 @@ class CatatanController extends Controller
         $this->CatatanModel->ubahData($id_cpiutang, $data);
         return redirect()->route('catatan')->with('pesan', 'berhasil');
     }
+
+    public function hapusCatatan($id)
+    {
+        $this->CatatanModel->hapusData($id);
+        return redirect()->route('catatan')->with('pesan', 'berhasil');
+    }
 }
