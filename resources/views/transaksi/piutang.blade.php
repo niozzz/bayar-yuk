@@ -137,7 +137,8 @@
     </div>
 </div>
 <!-- /page content -->
-@foreach ($piutang as $data) @if ($data->status_tpiutang != 'Lunas')
+@foreach ($piutang as $data) 
+@if ($data->status_tpiutang != 'Lunas')
 <!-- Modal -->
 <div
     class="modal fade"
@@ -191,7 +192,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            @endif @endforeach @foreach ($piutang as $data)
+                                            @endif @endforeach 
+                                            
+                                            @foreach ($piutang as $data)
                                             <!-- Modal -->
                                             <div
                                                 class="modal fade"

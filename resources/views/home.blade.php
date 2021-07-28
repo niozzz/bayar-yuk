@@ -23,6 +23,3 @@
 
 
 @endsection
-@php
-    dd(session()->all());
-@endphp
