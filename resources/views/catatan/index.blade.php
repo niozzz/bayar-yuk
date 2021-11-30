@@ -9,7 +9,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Catatan Pribadi</h3>
+               <a href="/catatan-pribadi/{{ auth()->user()->id }}" target="_blank"><h3>Catatan Pribadi</h3></a>  
             </div>
         </div>
         <div class="clearfix"></div>
